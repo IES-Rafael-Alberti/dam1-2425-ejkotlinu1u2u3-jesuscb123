@@ -29,15 +29,16 @@ fun pedir_ejercicio(msj:String,NUMERO_OPCIONES: Int):Int{
 }
 
 fun main() {
-    val NUMERO_OPCIONES = 6
+    val NUMERO_OPCIONES = 7
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",NUMERO_OPCIONES)
 
     when(ejercicio_usuario){
         1 -> ejercicio4()
         2 -> ejercicio6()
-        3 -> ejercicio12()
-        4 -> ejercicio15()
+        3 -> ejercicio12() //pendiente
+        4 -> ejercicio15() //pendiente
         5 -> ejercicio18()
+        6 -> ejercicio20()
         else ->{
             println("has finalizado el programa")
         }

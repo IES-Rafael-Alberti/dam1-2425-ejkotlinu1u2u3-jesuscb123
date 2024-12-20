@@ -4,9 +4,9 @@ package dam1.ejercicios.UNIDAD1
 
 
 
-fun mostrar_telefono(numero_telefono_completo: String) {
-    val lista_numero = numero_telefono_completo.split("-")
-    println(lista_numero[1])
+fun mostrar_telefono(prefijo_numero_extension: List<String>) {
+    val numero = prefijo_numero_extension[1]
+    println(numero)
 }
 
 fun comprobar_numero_correcto(prefijo_numero_extension:List<String>): Boolean {
@@ -14,19 +14,20 @@ fun comprobar_numero_correcto(prefijo_numero_extension:List<String>): Boolean {
         for (numero in prefijo_numero_extension) {
             tamaño_lista += 1
         }
-    if(tamaño_lista > 3){
+    if(tamaño_lista != 3){
         return false
     }
         return true
 }
 
-fun introducir_telefono(msj: String): String {
+fun introducir_telefono(msj: String): List<String> {
     var numero_correcto = false
+    var prefijo_numero_extension: List<String> = emptyList()
     while(!numero_correcto){
         try{
             println(msj)
             val numero_telefono_completo = readln().toString()
-            var prefijo_numero_extension = numero_telefono_completo.split("-")
+            prefijo_numero_extension = numero_telefono_completo.split("-")
             if(!comprobar_numero_correcto(prefijo_numero_extension)) {
                 throw IllegalArgumentException("El número introducido es incorrecto")
             }
@@ -36,6 +37,7 @@ fun introducir_telefono(msj: String): String {
             mostrar_error("$e")
         }
     }
+    return prefijo_numero_extension
 }
 
 

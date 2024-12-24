@@ -1,12 +1,14 @@
-package dam1.ejercicios.UNIDAD1
+package dam1.ejercicios.UNIDAD2.SentenciasCondicionales
+
+import dam1.ejercicios.UNIDAD1.*
 
 fun mostrar_menu(){
     val menu = """
         EJERCICIOS UNIDAD 1
         -------------------
         Indica el ejercicio al que quieres hacer ejercicio: 
-        4:  Ejercicio4
-        6:  Ejercicio6
+        2:  Ejercicio2
+        3:  Ejercicio3
         12: Ejercicio12
         15: Ejercicio15
         18: Ejercicio18
@@ -26,7 +28,7 @@ fun mostrar_error(msj: String){
 }
 
 fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
-   var ejercicio_correcto = false
+    var ejercicio_correcto = false
     var ejercicio_usuario = 0
     while(!ejercicio_correcto){
         try{
@@ -48,15 +50,15 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 }
 
 fun main() {
-    val EJERCICIOS = listOf(4,6,12,15,18,20,21,22,24,25,26,27)
+    val EJERCICIOS = listOf(2,3,6,8,18,20,21,22,24,25,26,27)
     mostrar_menu()
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
     when(ejercicio_usuario){
-        4 -> ejercicio4()
-        6 -> ejercicio6()
-        12 -> ejercicio12() //pendiente
-        15 -> ejercicio15() //pendiente
+        2 -> ejercicio2condicionales()
+        3 -> ejercicio3condicionales()
+        6-> ejercicio6condicionales()
+        8 -> ejercicio8condicionales()
         18 -> ejercicio18()
         20 -> ejercicio20()
         21 -> ejercicio21()
@@ -70,6 +72,3 @@ fun main() {
         }
     }
 }
-
-
-

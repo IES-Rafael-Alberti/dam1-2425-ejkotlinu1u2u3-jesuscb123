@@ -1,4 +1,6 @@
-package dam1.ejercicios.UNIDAD1
+package dam1.ejercicios.UNIDAD2
+
+import dam1.ejercicios.UNIDAD1.*
 
 fun mostrar_menu(){
     val menu = """
@@ -26,7 +28,7 @@ fun mostrar_error(msj: String){
 }
 
 fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
-   var ejercicio_correcto = false
+    var ejercicio_correcto = false
     var ejercicio_usuario = 0
     while(!ejercicio_correcto){
         try{
@@ -70,6 +72,3 @@ fun main() {
         }
     }
 }
-
-
-

@@ -42,7 +42,7 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
     return ejercicio_usuario
 }
 
-fun main() {
+fun maincondicionales() {
     val EJERCICIOS = listOf(2,3,6,8,10)
     mostrar_menu()
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)

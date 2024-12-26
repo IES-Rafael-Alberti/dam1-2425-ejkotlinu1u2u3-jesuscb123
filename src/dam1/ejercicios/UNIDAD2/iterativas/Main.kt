@@ -47,7 +47,7 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
     return ejercicio_usuario
 }
 
-fun main() {
+fun mainiterativas() {
     val EJERCICIOS = listOf(2,4,6,7,8,13,15,18,19,25)
     mostrar_menu()
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)

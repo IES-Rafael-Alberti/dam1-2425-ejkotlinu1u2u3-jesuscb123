@@ -1,24 +1,18 @@
 package dam1.ejercicios.UNIDAD2
 
 import dam1.ejercicios.UNIDAD1.*
+import dam1.ejercicios.UNIDAD2.SentenciasCondicionales.maincondicionales
+import dam1.ejercicios.UNIDAD2.excepciones.mainexcepciones
+import dam1.ejercicios.UNIDAD2.iterativas.mainiterativas
 
 fun mostrar_menu(){
     val menu = """
-        EJERCICIOS UNIDAD 1
+        EJERCICIOS UNIDAD 2
         -------------------
-        Indica el ejercicio al que quieres hacer ejercicio: 
-        4:  Ejercicio4
-        6:  Ejercicio6
-        12: Ejercicio12
-        15: Ejercicio15
-        18: Ejercicio18
-        20: Ejercicio20
-        21: Ejercicio21
-        22: Ejercicio22
-        24: Ejercicio24
-        25: Ejercicio25
-        26: Ejercicio26
-        27: Ejercicio27
+        Indica a que paquete de ejercicios quieres acceder: 
+        1:  Condicionales
+        2:  Iterativas
+        3:  Captura de excepciones.
                 """.trimIndent()
     println(menu)
 }
@@ -49,24 +43,14 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
     return ejercicio_usuario
 }
 
-fun main() {
-    val EJERCICIOS = listOf(4,6,12,15,18,20,21,22,24,25,26,27)
+fun mainunidad2() {
+    val EJERCICIOS = listOf(1,2,3)
     mostrar_menu()
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
-
     when(ejercicio_usuario){
-        4 -> ejercicio4()
-        6 -> ejercicio6()
-        12 -> ejercicio12() //pendiente
-        15 -> ejercicio15() //pendiente
-        18 -> ejercicio18()
-        20 -> ejercicio20()
-        21 -> ejercicio21()
-        22 -> ejercicio22()
-        24 -> ejercicio24()
-        25 -> ejercicio25()
-        26 -> ejercicio26()
-        27 -> ejercicio27()
+    1 -> maincondicionales()
+    2 -> mainiterativas()
+    3 -> mainexcepciones()
         else ->{
             println("has finalizado el programa")
         }

@@ -4,9 +4,9 @@ import dam1.ejercicios.UNIDAD1.*
 
 fun mostrar_menu(){
     val menu = """
-        EJERCICIOS UNIDAD 2 - Condicionales
+        EJERCICIOS UNIDAD 2 | Condicionales
         -----------------------------------
-        Indica el ejercicio al que quieres hacer ejercicio: 
+        Indica el ejercicio al que quieres acceder: 
         2. ejercicio2
         3. ejercicio3
         6. ejercicio6

@@ -1,20 +1,17 @@
-package dam1.ejercicios.UNIDAD3.listasytuplas
+package dam1.ejercicios.UNIDAD3.diccionarios
 
 import dam1.ejercicios.UNIDAD2.mainunidad2
+import dam1.ejercicios.UNIDAD3.listasytuplas.mainlistasytuplas
 
 
 fun mostrar_menu(){
     val menu = """
-        EJERCICIOS UNIDAD 3 | listas y tuplas
-        -------------------------------------------
-        Indica a que unidad quieres acceder: 
-        4.  Ejercicio4.
-        6.  Ejercicio6.
-        8.  Ejercicio8.
-        9.  Ejercicio9.
-        10. Ejercicio10.
-        
-        0. Salir.
+        EJERCICIOS UNIDAD 3 | Diccionarios
+        ----------------------------------
+        Indica a que ejercicio quieres acceder: 
+        3. Ejercicio3. 
+        5. Ejercicio5.
+        6. Ejercicio6.
                 """.trimIndent()
     println(menu)
 }
@@ -45,18 +42,15 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
     return ejercicio_usuario
 }
 
-fun mainlistasytuplas() {
-    val EJERCICIOS = listOf(4,6,8,9,10,13)
+fun maindiccionarios() {
+    val EJERCICIOS = listOf(3,5)
     mostrar_menu()
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
     when(ejercicio_usuario){
-        4 -> ejercicio4listasytuplas()
-        6 -> ejercicio6listasytuplas()
-        8 -> ejercicio8listasytuplas()
-        9 -> ejercicio9listasytuplas()
-        10 -> ejercicio10listasytuplas()
-        13 -> ejercicio13listasytuplas()
+        3 -> ejercicio3diccionarios()
+        5 -> ejercicio5diccionarios()
+        //6 -> mainunidad3()
         else ->{
             println("has finalizado el programa")
         }

@@ -2,6 +2,7 @@ package dam1.ejercicios.UNIDAD3
 
 import dam1.ejercicios.UNIDAD1.mainunidad1
 import dam1.ejercicios.UNIDAD2.mainunidad2
+import dam1.ejercicios.UNIDAD3.diccionarios.maindiccionarios
 import dam1.ejercicios.UNIDAD3.listasytuplas.mainlistasytuplas
 
 
@@ -50,7 +51,7 @@ fun mainunidad3() {
 
     when(ejercicio_usuario){
         1 -> mainlistasytuplas()
-        2 -> mainunidad2()
+        2 -> maindiccionarios()
         3 -> mainunidad3()
         else ->{
             println("has finalizado el programa")

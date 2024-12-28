@@ -12,7 +12,7 @@ fun mostrar_menu(){
         -------------------
         Indica a que unidad quieres acceder: 
         1. Listas y tuplas
-        2. Unidad 2
+        2. Diccionarios
         3. Unidad 3
                 """.trimIndent()
     println(menu)

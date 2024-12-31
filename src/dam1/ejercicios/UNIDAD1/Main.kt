@@ -5,18 +5,20 @@ fun mostrar_menu(){
         EJERCICIOS UNIDAD 1
         -------------------
         Indica el ejercicio al que quieres hacer ejercicio: 
-        4:  Ejercicio4
-        6:  Ejercicio6
-        12: Ejercicio12
-        15: Ejercicio15
-        18: Ejercicio18
-        20: Ejercicio20
-        21: Ejercicio21
-        22: Ejercicio22
-        24: Ejercicio24
-        25: Ejercicio25
-        26: Ejercicio26
-        27: Ejercicio27
+        4:  Ejercicio4.
+        6:  Ejercicio6.
+        12: Ejercicio12.
+        15: Ejercicio15.
+        18: Ejercicio18.
+        20: Ejercicio20.
+        21: Ejercicio21.
+        22: Ejercicio22.
+        24: Ejercicio24.
+        25: Ejercicio25.
+        26: Ejercicio26.
+        27: Ejercicio27.
+        
+        0. Salir.
                 """.trimIndent()
     println(menu)
 }

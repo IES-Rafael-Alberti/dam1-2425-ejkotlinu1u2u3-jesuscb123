@@ -7,9 +7,11 @@ fun mostrar_menu(){
         EJERCICIOS UNIDAD 2 | Captura de excepciones
         --------------------------------
         Indica el ejercicio al que quieres acceder: 
-        2:  Ejercicio2
-        3:  Ejercicio3
-        4:  Ejercicio4
+        2:  Ejercicio2.
+        3:  Ejercicio3.
+        4:  Ejercicio4.
+        
+        0. Salir.
                 """.trimIndent()
     println(menu)
 }

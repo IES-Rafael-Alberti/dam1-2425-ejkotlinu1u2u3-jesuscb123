@@ -13,6 +13,9 @@ fun mostrar_menu(){
         5. Ejercicio5.
         6. Ejercicio6.
         7. Ejercicio7.
+        8. Ejercicio8.
+        
+        0. Salir.
                 """.trimIndent()
     println(menu)
 }
@@ -44,7 +47,7 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 }
 
 fun maindiccionarios() {
-    val EJERCICIOS = listOf(3,5,6,7)
+    val EJERCICIOS = listOf(3,5,6,7,8,10)
     mostrar_menu()
     val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
@@ -53,7 +56,11 @@ fun maindiccionarios() {
         5 -> ejercicio5diccionarios()
         6 -> ejercicio6diccionarios()
         7 -> ejercicio7diccionarios()
-        else ->{
+        8 -> ejercicio8diccionarios()
+        // 10 -> ejercicio10diccionarios() PENDIENTE
+        // 11 -> ejercicio11diccionarios() PENDIENTE
+
+         else ->{
             println("has finalizado el programa")
         }
     }

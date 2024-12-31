@@ -2,6 +2,7 @@ package dam1.ejercicios.UNIDAD3
 
 import dam1.ejercicios.UNIDAD1.mainunidad1
 import dam1.ejercicios.UNIDAD2.mainunidad2
+import dam1.ejercicios.UNIDAD3.conjuntos.mainconjuntos
 import dam1.ejercicios.UNIDAD3.diccionarios.maindiccionarios
 import dam1.ejercicios.UNIDAD3.listasytuplas.mainlistasytuplas
 
@@ -11,9 +12,11 @@ fun mostrar_menu(){
         EJERCICIOS UNIDAD 3
         -------------------
         Indica a que unidad quieres acceder: 
-        1. Listas y tuplas
-        2. Diccionarios
-        3. Unidad 3
+        1. Listas y tuplas.
+        2. Diccionarios.
+        3. Conjuntos.
+        
+        0. Salir.
                 """.trimIndent()
     println(menu)
 }
@@ -52,7 +55,7 @@ fun mainunidad3() {
     when(ejercicio_usuario){
         1 -> mainlistasytuplas()
         2 -> maindiccionarios()
-        3 -> mainunidad3()
+        3 -> mainconjuntos()
         else ->{
             println("has finalizado el programa")
         }

@@ -1,5 +1,7 @@
 package dam1.ejercicios.UNIDAD2.iterativas
 
+import java.lang.classfile.Opcode
+
 //Mostrar un menú con tres opciones: 1- comenzar programa, 2- imprimir listado, 3-finalizar programa. A continuación, el usuario debe poder seleccionar una opción (1, 2 ó 3). Si elige una opción incorrecta, informarle del error. El menú se debe volver a mostrar luego de ejecutada cada opción, permitiendo volver a elegir. Si elige las opciones 1 ó 2 se imprimirá un texto. Si elige la opción 3, se interrumpirá la impresión del menú y el programa finalizará.
 
 var MENU ="""
@@ -16,7 +18,7 @@ fun limpiar_pantalla(){
     }
 }
 
-fun pedir_opcion(): Int{
+fun pedir_opcion(OPCIONES: Int): Int{
    var opcion_correcta = false
     var opcion = 0
     while(!opcion_correcta){
@@ -24,7 +26,7 @@ fun pedir_opcion(): Int{
             println(MENU)
             println("Introduce una opción")
             opcion = readln().toInt()
-            if(opcion < 1 || opcion > 3){
+            if(opcion < 1 || opcion > OPCIONES){
                 throw IllegalArgumentException("**ERROR** Introduce una opción correcta")
             }
             opcion_correcta = true
@@ -40,9 +42,10 @@ fun pedir_opcion(): Int{
 
 
 fun ejercicio19iterativa(){
+    val OPCIONES = 3
     do{
         limpiar_pantalla()
-        var opcion = pedir_opcion()
+        var opcion = pedir_opcion(OPCIONES)
         when(opcion){
             1 -> println("Has comenzado el programa")
             2 -> println("Imprimiendo listado...")

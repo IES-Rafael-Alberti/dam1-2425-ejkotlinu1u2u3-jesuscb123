@@ -7,16 +7,18 @@ fun mostrar_menu(){
         EJERCICIOS UNIDAD 2 | Iterativas
         --------------------------------
         Indica el ejercicio al que quieres acceder: 
-        2:  Ejercicio2
-        4:  Ejercicio4
-        6:  Ejercicio6
-        7:  Ejercicio7
-        8:  Ejercicio8
-        13: Ejercicio13
-        15: Ejercicio15
-        18: Ejercicio18
-        19: Ejercicio19
-        25: Ejercicio25
+        2:  Ejercicio2.
+        4:  Ejercicio4.
+        6:  Ejercicio6.
+        7:  Ejercicio7.
+        8:  Ejercicio8.
+        13: Ejercicio13.
+        15: Ejercicio15.
+        18: Ejercicio18.
+        19: Ejercicio19.
+        25: Ejercicio25.
+        
+        0. Salir.
                 """.trimIndent()
     println(menu)
 }

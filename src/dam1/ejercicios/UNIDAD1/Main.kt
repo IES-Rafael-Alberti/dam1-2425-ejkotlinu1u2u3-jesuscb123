@@ -57,8 +57,8 @@ fun mainunidad1() {
     when(ejercicio_usuario){
         4 -> ejercicio4()
         6 -> ejercicio6()
-        12 -> ejercicio12() //pendiente
-        15 -> ejercicio15() //pendiente
+        12 -> ejercicio12()
+        15 -> ejercicio15()
         18 -> ejercicio18()
         20 -> ejercicio20()
         21 -> ejercicio21()

@@ -1,6 +1,6 @@
 package dam1.ejercicios.UNIDAD3.listasytuplas
 
-import dam1.ejercicios.UNIDAD1.pedir_dato
+
 
 //Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
 
@@ -17,7 +17,7 @@ fun es_palindromo(palabra: String){
 fun pedir_dato_string(msj: String): String{
     println(msj)
     val palabra = readln()
-    return palabra
+    return palabra.lowercase()
 }
 
 fun ejercicio8listasytuplas(){

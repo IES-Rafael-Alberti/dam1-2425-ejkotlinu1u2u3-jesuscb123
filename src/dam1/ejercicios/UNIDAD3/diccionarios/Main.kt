@@ -9,11 +9,12 @@ fun mostrar_menu(){
         EJERCICIOS UNIDAD 3 | Diccionarios
         ----------------------------------
         Indica a que ejercicio quieres acceder: 
-        3. Ejercicio3. 
-        5. Ejercicio5.
-        6. Ejercicio6.
-        7. Ejercicio7.
-        8. Ejercicio8.
+        3.  Ejercicio3. 
+        5.  Ejercicio5.
+        6.  Ejercicio6.
+        7.  Ejercicio7.
+        8.  Ejercicio8.
+        10. Ejercicio10.
         
         0. Salir.
                 """.trimIndent()
@@ -57,7 +58,7 @@ fun maindiccionarios() {
         6 -> ejercicio6diccionarios()
         7 -> ejercicio7diccionarios()
         8 -> ejercicio8diccionarios()
-        // 10 -> ejercicio10diccionarios() PENDIENTE
+        10 -> ejercicio10diccionarios() //pendiente
         // 11 -> ejercicio11diccionarios() PENDIENTE
 
          else ->{

@@ -2,37 +2,37 @@ package dam1.ejercicios.UNIDAD1//Escribir un programa que pida al usuario su pes
 import kotlin.math.pow
 import kotlin.math.roundToInt
 
-fun pedir_dato(): Float{
-    var dato: Float? = null
-    var dato_correcto = false
-    try {
-        while (dato_correcto == false) {
-            println("Introduce tu peso")
-            var dato = readln().toFloat()
-            dato_correcto = true
+fun pedir_dato_double(msj: String): Double{
+    var  numero_double_correcto = false
+    var dato = 0.0
+    while(!numero_double_correcto){
+        try{
+            println(msj)
+            dato = readln().toDouble()
+            if(dato < 0){
+                throw IllegalArgumentException("**ERROR** el número no puede ser negativo.")
+            }
+            numero_double_correcto = true
+
+        }catch (e: IllegalArgumentException){
+            mostrar_error("$e")
+        }catch (e: NumberFormatException){
+            mostrar_error("$e")
         }
-    } catch (e: Exception) {
-        dato_correcto = false
-        println("Error, introduce un peso correcto")
     }
-    return dato!!
+    return dato
 }
 
-fun calcular_masa_muscular(peso: Float,metros: Float):Float?{
-   var masa_muscular_redondeada: Float? = null
-    try{
+fun calcular_masa_muscular(peso: Double,metros: Double): Double{
        var masa_muscular = peso / metros.pow(2)
-        masa_muscular_redondeada = masa_muscular.roundToInt().toFloat()
-    }catch (e: Exception){
-        println("error, no se puede calcular el índice de masa muscular")
-    }
+    var masa_muscular_redondeada = masa_muscular
     return masa_muscular_redondeada
 }
 
 
 fun ejercicio12(){
-    var peso = pedir_dato()
-    var metros = pedir_dato()
+    var peso = pedir_dato_double("Introduce tu peso")
+    var metros = pedir_dato_double("Introduce tu altura")
     var masa_muscular = calcular_masa_muscular(peso,metros)
     println("Tu masa muscular es: $masa_muscular")
 

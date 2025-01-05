@@ -23,7 +23,6 @@ fun pedir_opcion(OPCIONES: Int): Int{
     var opcion = 0
     while(!opcion_correcta){
         try{
-            println(MENU)
             println("Introduce una opción")
             opcion = readln().toInt()
             if(opcion < 1 || opcion > OPCIONES){
@@ -45,6 +44,7 @@ fun ejercicio19iterativa(){
     val OPCIONES = 3
     do{
         limpiar_pantalla()
+        println(MENU)
         var opcion = pedir_opcion(OPCIONES)
         when(opcion){
             1 -> println("Has comenzado el programa")

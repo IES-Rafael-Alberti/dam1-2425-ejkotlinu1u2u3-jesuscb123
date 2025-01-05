@@ -1,8 +1,5 @@
 package dam1.ejercicios.UNIDAD3.diccionarios
 
-import dam1.ejercicios.UNIDAD1.mostrar_telefono
-import dam1.ejercicios.UNIDAD1.pedir_dato
-import dam1.ejercicios.UNIDAD2.iterativas.pedir_numero
 import dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
 
 // Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre una persona (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez que se añada un nuevo dato debe imprimirse el contenido del diccionario.

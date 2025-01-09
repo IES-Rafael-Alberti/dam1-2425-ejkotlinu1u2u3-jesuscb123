@@ -1,6 +1,5 @@
 package com.dam1.ejercicios.UNIDAD2.iterativas
 
-import com.dam1.ejercicios.UNIDAD1.*
 
 fun mostrar_menu(){
     val menu = """
@@ -18,7 +17,7 @@ fun mostrar_menu(){
         19: Ejercicio19.
         25: Ejercicio25.
         
-        0. Salir.
+        0. Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -51,23 +50,26 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainiterativas() {
     val EJERCICIOS = listOf(2,4,6,7,8,13,15,18,19,25)
-    com.dam1.ejercicios.UNIDAD2.iterativas.mostrar_menu()
-    val ejercicio_usuario =
-        com.dam1.ejercicios.UNIDAD2.iterativas.pedir_ejercicio("Introduce a que ejercicio quieres acceder", EJERCICIOS)
-
-    when(ejercicio_usuario){
-        2 -> ejercicio2iterativa()
-        4 -> ejercicio4iterativa()
-        6 -> ejercicio6iterativa()
-        7 -> ejercicio7iterativa()
-        //8 -> ejercicio8iterativa() //pendiente
-        13 -> ejercicio13iterativa()
-        15 -> ejercicio15iterativa()
-        18 -> ejercicio18iterativa()
-        19 -> ejercicio19iterativa()
-        25 -> ejercicio25iterativa()
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder", EJERCICIOS)
+        when(ejercicio_usuario){
+            2 -> ejercicio2iterativa()
+            4 -> ejercicio4iterativa()
+            6 -> ejercicio6iterativa()
+            7 -> ejercicio7iterativa()
+            8 -> ejercicio8iterativa()
+            13 -> ejercicio13iterativa()
+            15 -> ejercicio15iterativa()
+            18 -> ejercicio18iterativa()
+            19 -> ejercicio19iterativa()
+            25 -> ejercicio25iterativa()
+            else ->{
+                salir = true
+            }
         }
     }
+
 }

@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.listasytuplas
 
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
 import com.dam1.ejercicios.UNIDAD2.mainunidad2
 
 
@@ -14,7 +15,7 @@ fun mostrar_menu(){
         9.  Ejercicio9.
         10. Ejercicio10.
         
-        0. Salir.
+        0. Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -47,18 +48,24 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainlistasytuplas() {
     val EJERCICIOS = listOf(4,6,8,9,10,13)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
-    when(ejercicio_usuario){
-        4 -> ejercicio4listasytuplas()
-        6 -> ejercicio6listasytuplas()
-        8 -> ejercicio8listasytuplas()
-        9 -> ejercicio9listasytuplas()
-        10 -> ejercicio10listasytuplas()
-        13 -> ejercicio13listasytuplas()
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            4 -> ejercicio4listasytuplas()
+            6 -> ejercicio6listasytuplas()
+            8 -> ejercicio8listasytuplas()
+            9 -> ejercicio9listasytuplas()
+            10 -> ejercicio10listasytuplas()
+            13 -> ejercicio13listasytuplas()
+            else ->{
+                salir = true
+                println("has finalizado el programa")
+            }
         }
     }
+
 }

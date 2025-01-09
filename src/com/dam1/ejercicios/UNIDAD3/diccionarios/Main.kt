@@ -1,7 +1,8 @@
 package com.dam1.ejercicios.UNIDAD3.diccionarios
 
-import com.dam1.ejercicios.UNIDAD2.mainunidad2
-import com.dam1.ejercicios.UNIDAD3.listasytuplas.mainlistasytuplas
+
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
+import com.dam1.ejercicios.UNIDAD3.mainunidad3
 
 
 fun mostrar_menu(){
@@ -17,7 +18,7 @@ fun mostrar_menu(){
         10. Ejercicio10.
         11. Ejercicio11.
         
-        0. Salir.
+        0. Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -50,20 +51,24 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun maindiccionarios() {
     val EJERCICIOS = listOf(3,5,6,7,8,10,11)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
-    when(ejercicio_usuario){
-        3 -> ejercicio3diccionarios()
-        5 -> ejercicio5diccionarios()
-        6 -> ejercicio6diccionarios()
-        7 -> ejercicio7diccionarios()
-        8 -> ejercicio8diccionarios()
-        10 -> ejercicio10diccionarios()
-        11 -> ejercicio11diccionarios()
-
-         else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            3 -> ejercicio3diccionarios()
+            5 -> ejercicio5diccionarios()
+            6 -> ejercicio6diccionarios()
+            7 -> ejercicio7diccionarios()
+            8 -> ejercicio8diccionarios()
+            10 -> ejercicio10diccionarios()
+            11 -> ejercicio11diccionarios()
+            else ->{
+                salir = true
+            }
         }
     }
+
 }

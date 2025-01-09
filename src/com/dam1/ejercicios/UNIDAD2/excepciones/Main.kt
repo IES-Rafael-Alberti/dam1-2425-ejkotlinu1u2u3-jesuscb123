@@ -2,6 +2,7 @@ package com.dam1.ejercicios.UNIDAD2.excepciones
 
 import com.dam1.ejercicios.UNIDAD2.iterativas.*
 
+
 fun mostrar_menu(){
     val menu = """
         EJERCICIOS UNIDAD 2 | Captura de excepciones
@@ -11,7 +12,7 @@ fun mostrar_menu(){
         3:  Ejercicio3.
         4:  Ejercicio4.
         
-        0. Salir.
+        0.  Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -44,15 +45,19 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainexcepciones() {
     val EJERCICIOS = listOf(2,3,4)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
-    when(ejercicio_usuario){
-        2 -> ejercicio2excepciones()
-        3 -> ejercicio3excepciones()
-        4 -> ejercicio4excepciones()
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            2 -> ejercicio2excepciones()
+            3 -> ejercicio3excepciones()
+            4 -> ejercicio4excepciones()
+            else ->{
+                salir = true
+            }
         }
     }
 }

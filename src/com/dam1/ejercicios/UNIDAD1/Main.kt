@@ -1,5 +1,8 @@
 package com.dam1.ejercicios.UNIDAD1
 
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
+import com.dam1.ejercicios.main
+
 fun mostrar_menu(){
     val menu = """
         EJERCICIOS UNIDAD 1
@@ -18,7 +21,7 @@ fun mostrar_menu(){
         26: Ejercicio26.
         27: Ejercicio27.
         
-        0. Salir.
+        0. Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -51,26 +54,30 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainunidad1() {
     val EJERCICIOS = listOf(4,6,12,15,18,20,21,22,24,25,26,27)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
-
-    when(ejercicio_usuario){
-        4 -> ejercicio4()
-        6 -> ejercicio6()
-        12 -> ejercicio12()
-        15 -> ejercicio15()
-        18 -> ejercicio18()
-        20 -> ejercicio20()
-        21 -> ejercicio21()
-        22 -> ejercicio22()
-        24 -> ejercicio24()
-        25 -> ejercicio25()
-        26 -> ejercicio26()
-        27 -> ejercicio27()
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            4 -> ejercicio4()
+            6 -> ejercicio6()
+            12 -> ejercicio12()
+            15 -> ejercicio15()
+            18 -> ejercicio18()
+            20 -> ejercicio20()
+            21 -> ejercicio21()
+            22 -> ejercicio22()
+            24 -> ejercicio24()
+            25 -> ejercicio25()
+            26 -> ejercicio26()
+            27 -> ejercicio27()
+            else ->{
+                salir = true
+            }
         }
     }
+
 }
 
 

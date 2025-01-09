@@ -1,9 +1,11 @@
 package com.dam1.ejercicios.UNIDAD2
 
-import com.dam1.ejercicios.UNIDAD1.*
+
 import com.dam1.ejercicios.UNIDAD2.SentenciasCondicionales.maincondicionales
 import com.dam1.ejercicios.UNIDAD2.excepciones.mainexcepciones
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
 import com.dam1.ejercicios.UNIDAD2.iterativas.mainiterativas
+
 
 fun mostrar_menu(){
     val menu = """
@@ -13,8 +15,7 @@ fun mostrar_menu(){
         1:  Condicionales
         2:  Iterativas
         3:  Captura de excepciones.
-        
-        0. Salir.
+        0. Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -47,14 +48,20 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainunidad2() {
     val EJERCICIOS = listOf(1,2,3)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
-    when(ejercicio_usuario){
-    1 -> maincondicionales()
-    2 -> mainiterativas()
-    3 -> mainexcepciones()
-        else ->{
-            println("has finalizado el programa")
+
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            1 -> maincondicionales()
+            2 -> mainiterativas()
+            3 -> mainexcepciones()
+            else ->{
+                salir = true
+            }
         }
     }
+
 }

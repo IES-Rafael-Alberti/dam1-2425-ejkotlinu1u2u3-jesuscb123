@@ -1,17 +1,22 @@
 package com.dam1.ejercicios.UNIDAD2.SentenciasCondicionales
 
-import com.dam1.ejercicios.UNIDAD1.*
+
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
+import com.dam1.ejercicios.UNIDAD2.mainunidad2
 
 fun mostrar_menu(){
     val menu = """
         EJERCICIOS UNIDAD 2 | Condicionales
         -----------------------------------
         Indica el ejercicio al que quieres acceder: 
-        2. ejercicio2
-        3. ejercicio3
-        6. ejercicio6
-        8. ejercicio8
-        10. ejercicio10
+        2. ejercicio2.
+        3. ejercicio3.
+        6. ejercicio6.
+        8. ejercicio8.
+        10. ejercicio10.
+        
+        0. Atrás.
+
                 """.trimIndent()
     println(menu)
 }
@@ -44,17 +49,23 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun maincondicionales() {
     val EJERCICIOS = listOf(2,3,6,8,10)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
-    when(ejercicio_usuario){
-        2 -> ejercicio2condicionales()
-        3 -> ejercicio3condicionales()
-        6-> ejercicio6condicionales()
-        8 -> ejercicio8condicionales()
-        10 -> ejercicio10condicionales()
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            2 -> ejercicio2condicionales()
+            3 -> ejercicio3condicionales()
+            6-> ejercicio6condicionales()
+            8 -> ejercicio8condicionales()
+            10 -> ejercicio10condicionales()
+            else ->{
+                salir = true
+                println("has finalizado el programa")
+            }
         }
     }
+
 }

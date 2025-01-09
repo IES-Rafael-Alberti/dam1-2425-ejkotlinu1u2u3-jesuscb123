@@ -1,7 +1,10 @@
 package com.dam1.ejercicios.UNIDAD3.conjuntos
 
 import com.dam1.ejercicios.UNIDAD2.SentenciasCondicionales.ejercicio6condicionales
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
+import com.dam1.ejercicios.UNIDAD2.mainunidad2
 import com.dam1.ejercicios.UNIDAD3.diccionarios.*
+import com.dam1.ejercicios.UNIDAD3.mainunidad3
 
 
 fun mostrar_menu(){
@@ -15,7 +18,7 @@ fun mostrar_menu(){
         5. Ejercicio5.
         6. Ejercicio6.
         
-        0. Salir.
+        0. Atrás.
         
                 """.trimIndent()
     println(menu)
@@ -49,17 +52,21 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainconjuntos() {
     val EJERCICIOS = listOf(1,2,5,6)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
 
-    when(ejercicio_usuario){
-        1 -> ejercicio1conjuntos()
-        2 -> ejercicio2conjuntos()
-        5 -> ejercicio5conjuntos()
-        6 -> ejercicio6conjuntos()
-
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            1 -> ejercicio1conjuntos()
+            2 -> ejercicio2conjuntos()
+            5 -> ejercicio5conjuntos()
+            6 -> ejercicio6conjuntos()
+            else ->{
+                salir = true
+            }
         }
     }
+
 }

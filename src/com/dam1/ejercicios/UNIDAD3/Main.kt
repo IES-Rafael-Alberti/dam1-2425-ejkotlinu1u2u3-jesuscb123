@@ -1,10 +1,10 @@
 package com.dam1.ejercicios.UNIDAD3
 
-import com.dam1.ejercicios.UNIDAD1.mainunidad1
-import com.dam1.ejercicios.UNIDAD2.mainunidad2
+import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
 import com.dam1.ejercicios.UNIDAD3.conjuntos.mainconjuntos
 import com.dam1.ejercicios.UNIDAD3.diccionarios.maindiccionarios
 import com.dam1.ejercicios.UNIDAD3.listasytuplas.mainlistasytuplas
+import com.dam1.ejercicios.main
 
 
 fun mostrar_menu(){
@@ -16,7 +16,7 @@ fun mostrar_menu(){
         2. Diccionarios.
         3. Conjuntos.
         
-        0. Salir.
+        0. Atrás.
                 """.trimIndent()
     println(menu)
 }
@@ -49,15 +49,20 @@ fun pedir_ejercicio(msj:String,EJERCICIOS: List<Int>):Int{
 
 fun mainunidad3() {
     val EJERCICIOS = listOf(1,2,3)
-    mostrar_menu()
-    val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
-
-    when(ejercicio_usuario){
-        1 -> mainlistasytuplas()
-        2 -> maindiccionarios()
-        3 -> mainconjuntos()
-        else ->{
-            println("has finalizado el programa")
+    var salir = false
+    while(!salir){
+        limpiar_pantalla()
+        mostrar_menu()
+        val ejercicio_usuario = pedir_ejercicio("Introduce a que ejercicio quieres acceder",EJERCICIOS)
+        when(ejercicio_usuario){
+            1 -> mainlistasytuplas()
+            2 -> maindiccionarios()
+            3 -> mainconjuntos()
+            0 -> main()
+            else ->{
+                salir = true
+            }
         }
     }
+
 }

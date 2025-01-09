@@ -42,5 +42,5 @@ fun pedir_nombre(msj: String): String{
 fun ejercicio18(){
     val nombre_completo = pedir_nombre("Introduce tu nombre")
     mostrar_nombre(nombre_completo)
-
+    pausa()
 }

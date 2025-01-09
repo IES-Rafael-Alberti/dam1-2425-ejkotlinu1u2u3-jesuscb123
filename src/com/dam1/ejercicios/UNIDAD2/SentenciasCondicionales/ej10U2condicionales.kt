@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD2.SentenciasCondicionales
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 //La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
 //
 //Ingredientes vegetarianos: Pimiento y tofu.
@@ -127,6 +129,7 @@ fun ejercicio10condicionales(){
     val tipo_pizza = introducir_tipo_pizza()
     val ingrediente_usuario = introducir_ingrediente(tipo_pizza)
     mostrar_pedido(tipo_pizza, ingrediente_usuario)
+    pausa()
 
 
 

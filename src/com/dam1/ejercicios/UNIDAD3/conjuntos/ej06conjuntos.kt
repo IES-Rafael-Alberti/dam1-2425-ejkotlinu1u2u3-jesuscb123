@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD3.conjuntos
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 // Dado el conjunto de letras:
 //
 //vocales = {'a', 'e', 'i', 'o', 'u'}
@@ -16,4 +18,5 @@ fun ejercicio6conjuntos(){
     val consonantes = setOf('b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z')
     val letras_comunes = vocales.intersect(vocales)
     println(letras_comunes)
+    pausa()
 }

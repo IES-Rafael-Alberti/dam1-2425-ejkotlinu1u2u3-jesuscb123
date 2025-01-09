@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD2.excepciones
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 //Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
 
 
@@ -38,4 +40,5 @@ fun pedir_numero_positivo(msj: String): Int{
 fun ejercicio2excepciones() {
     val numero = pedir_numero_positivo("Introduce un número entero")
     mostrar_impares(numero)
+    pausa()
 }

@@ -35,5 +35,6 @@ fun ejercicio12(){
     var metros = pedir_dato_double("Introduce tu altura")
     var masa_muscular = calcular_masa_muscular(peso,metros)
     println("Tu masa muscular es: $masa_muscular")
+    pausa()
 
 }

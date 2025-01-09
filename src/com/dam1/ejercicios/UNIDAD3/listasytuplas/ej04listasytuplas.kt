@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.listasytuplas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD2.excepciones.pedir_numero_positivo
 import com.dam1.ejercicios.UNIDAD2.iterativas.pedir_numero
 
@@ -27,4 +28,5 @@ fun ganadores_loteria(): List<Int>{
 fun ejercicio4listasytuplas(){
     val numeros_loteria = ganadores_loteria()
     mostrar_lista_ordenada(numeros_loteria)
+    pausa()
 }

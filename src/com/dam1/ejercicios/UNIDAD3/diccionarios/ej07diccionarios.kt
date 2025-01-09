@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.diccionarios
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
 
 //Escribir un programa que cree un diccionario simulando una cesta de la compra. El programa debe preguntar el artículo y su precio y añadir el par al diccionario, hasta que el usuario decida terminar. Después se debe mostrar por pantalla la lista de la compra y el coste total, con el siguiente formato
@@ -58,8 +59,10 @@ fun ejercicio7diccionarios(){
             var precio = pedir_precio("Introduce el precio del producto")
             lista_cesta[producto] = precio
             println(lista_cesta)
+            pausa()
         }
 
     }
     mostrar_cesta(lista_cesta)
+    pausa()
 }

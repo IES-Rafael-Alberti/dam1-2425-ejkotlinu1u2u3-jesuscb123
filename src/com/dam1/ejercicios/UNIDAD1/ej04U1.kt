@@ -3,6 +3,11 @@ package com.dam1.ejercicios.UNIDAD1
 //explicame esto en kotlin Escribe un programa que le pida al usuario una temperatura en grados Celsius, la convierta a grados Fahrenheit e imprima por pantalla la temperatura convertida.
 
 
+fun pausa(){
+    println("Pulsa ENTER para continuar...")
+    readln()
+}
+
 fun pedir_temperatura(): Float? {
     println("Dime la temperatura en Celsius")
     try {
@@ -41,6 +46,7 @@ fun ejercicio4() {
     var far_temperatura = convertir_fare(celsius_temperatura!!)
     if (far_temperatura != null){
         println("La temperatura en Celsius es: $celsius_temperatura y la temperatura en Fahrenheit es: $far_temperatura")
+        pausa()
     }else{
         println("Error de conversión")
     }

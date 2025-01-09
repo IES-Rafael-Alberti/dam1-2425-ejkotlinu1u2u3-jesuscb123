@@ -26,4 +26,5 @@ fun ejercicio27(){
     val precio = introducir_numero("Introduce el precio del producto").toFloat()
     val unidades = introducir_numero("Introduce el número de unidades")
     mostrar_producto_precio_total(producto,precio,unidades)
+    pausa()
 }

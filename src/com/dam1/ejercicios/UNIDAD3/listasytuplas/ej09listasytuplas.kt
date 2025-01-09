@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD3.listasytuplas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 
 //Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces que contiene cada vocal.
 
@@ -39,4 +41,5 @@ fun ejercicio9listasytuplas() {
     val VOCALES = listOf("a","e","i","o","u")
     val palabra = pedir_dato_string("Introduce una palabra")
     contador_vocal_en_palabra(VOCALES,palabra)
+    pausa()
 }

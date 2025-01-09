@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.diccionarios
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD2.iterativas.limpiar_pantalla
 import com.dam1.ejercicios.UNIDAD2.iterativas.pedir_opcion
 import com.dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
@@ -134,14 +135,22 @@ fun ejercicio10diccionarios(){
         println(MENU)
         var opcion = pedir_opcion(OPCIONES)
         when(opcion) {
-            1 -> añadir_cliente(base_datos)
-            2 -> eliminar_cliente(base_datos)
-            3 -> mostrar_cliente(base_datos)
-            4 -> mostrar_todos_clientes(base_datos)
-            5 -> mostrar_solo_preferentes(base_datos)
+            1 -> {añadir_cliente(base_datos)
+                pausa()
+            }
+            2 -> {eliminar_cliente(base_datos)
+                pausa()
+            }
+            3 -> {mostrar_cliente(base_datos)
+                pausa()}
+            4 -> {mostrar_todos_clientes(base_datos)
+                pausa()}
+            5 -> {mostrar_solo_preferentes(base_datos)
+                pausa()}
             6-> terminar = true
         }
 
     }
     println("Has finalizado el programa.")
+    pausa()
 }

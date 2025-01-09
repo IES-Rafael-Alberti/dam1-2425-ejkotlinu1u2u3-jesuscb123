@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD2.iterativas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 //Solicitar al usuario que ingrese una frase y luego informar cuál fue la palabra más larga (en caso de haber más de una, mostrar la primera) y cuántas palabras había. Precondición: se tomará como separador de palabras al carácter “ “ (espacio), ya sea uno o más.
 
 
@@ -20,4 +22,5 @@ fun mostrar_palabra_mas_larga(frase: String){
 fun ejercicio25iterativa(){
     var frase = pedir_frase("Introduce una frase")
     mostrar_palabra_mas_larga(frase)
+    pausa()
 }

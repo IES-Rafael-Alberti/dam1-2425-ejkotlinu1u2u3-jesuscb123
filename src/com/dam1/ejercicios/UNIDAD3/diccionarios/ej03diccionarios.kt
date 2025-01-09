@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.diccionarios
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import java.util.Dictionary
 
 //Escribir un programa que guarde en un diccionario los precios de las frutas de la tabla, pregunte al usuario por una fruta, un número de kilos y muestre por pantalla el precio de ese número de kilos de fruta. Si la fruta no está en el diccionario debe mostrar un mensaje informando de ello.
@@ -47,4 +48,5 @@ fun ejercicio3diccionarios(){
     val FRUTAS = mapOf("platano" to 1.35,"manzana" to 0.80, "pera" to 0.85, "naranja" to 0.70 )
     var (fruta_usuario,kilos) = pedir_fruta("Introduce la fruta que quieres y cuántos kilos",FRUTAS)
     mostrar_precio_kilos(fruta_usuario,kilos,FRUTAS)
+    pausa()
 }

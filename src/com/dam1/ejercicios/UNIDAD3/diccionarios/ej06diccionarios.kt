@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.diccionarios
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
 
 // Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre una persona (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. Cada vez que se añada un nuevo dato debe imprimirse el contenido del diccionario.
@@ -8,6 +9,7 @@ import com.dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
 fun añadir_datos(tipo_dato: String, datos_usuario: MutableMap<String,String>,dato: String){
     datos_usuario[tipo_dato] = dato
     println(datos_usuario)
+    pausa()
 
 }
 
@@ -41,4 +43,5 @@ fun ejercicio6diccionarios(){
     añadir_datos("teléfono",datos_usuario, telefono)
     var correo = pedir_dato_string("Introduce correo")
     añadir_datos("correo",datos_usuario,correo)
+
 }

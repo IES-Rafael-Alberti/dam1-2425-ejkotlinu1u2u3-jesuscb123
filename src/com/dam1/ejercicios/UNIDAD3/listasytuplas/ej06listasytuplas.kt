@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.listasytuplas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD2.excepciones.pedir_numero_positivo
 
 //Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, pregunte al usuario la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas aprobadas. Al final el programa debe mostrar por pantalla las asignaturas que el usuario tiene que repetir.
@@ -30,4 +31,5 @@ fun ejercicio6listasytuplas(){
     var lista_asignaturas = mutableListOf("Matemáticas", "Física", "Química","Historia","Lengua")
     var asignaturas_suspensas = pedir_notas(lista_asignaturas)
     mostrar_asignaturas_suspensas(asignaturas_suspensas)
+    pausa()
 }

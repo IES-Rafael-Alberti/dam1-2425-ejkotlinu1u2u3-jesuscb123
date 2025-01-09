@@ -45,4 +45,5 @@ fun introducir_precio(msj: String): Float{
 fun ejercicio24(){
     var precio = introducir_precio("Introduce el precio del producto con dos decimales")
     mostrar_euros_decimales(precio)
+    pausa()
 }

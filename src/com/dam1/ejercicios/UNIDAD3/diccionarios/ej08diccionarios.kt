@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.diccionarios
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
 
 
@@ -41,6 +42,7 @@ fun ejercicio8diccionarios(){
     println(diccionario_español_ingles)
     val frase = pedir_dato_string("Introduce una frase")
     traducir_frase(frase,diccionario_español_ingles)
+    pausa()
 
 
 }

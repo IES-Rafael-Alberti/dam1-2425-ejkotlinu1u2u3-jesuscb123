@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD2.SentenciasCondicionales
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 
 
 fun comprobar_coincidencia(contrasenia_defecto: String,contrasenia: String): String{
@@ -21,4 +22,5 @@ fun ejercicio2condicionales(){
     val contrasenia_defecto = "contraseña"
     val contrasenia = introducir_contrasenia("Introduce la constraseña")
     print(comprobar_coincidencia(contrasenia_defecto,contrasenia))
+    pausa()
 }

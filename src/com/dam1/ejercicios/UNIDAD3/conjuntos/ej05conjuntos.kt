@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD3.conjuntos
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 //Dado el conjunto de números enteros:
 //
 //numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -32,4 +34,5 @@ fun ejercicio5conjuntos(){
     println("Numeros pares: $pares")
     println("Numeros multiplo3: $multiplo3")
     println("Numeros pares y multiplos de 3: $pares_y_multiplos_de_3")
+    pausa()
 }

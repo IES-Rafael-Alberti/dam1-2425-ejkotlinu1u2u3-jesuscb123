@@ -19,4 +19,5 @@ fun introducir_productos(msj: String): String{
 fun ejercicio26(){
     var cesta_compra = introducir_productos("Introduces los productos separados por ,")
     mostrar_productos(cesta_compra)
+    pausa()
 }

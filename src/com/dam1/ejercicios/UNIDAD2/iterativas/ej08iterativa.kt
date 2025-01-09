@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD2.iterativas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD2.excepciones.pedir_numero_positivo
 
 
@@ -29,5 +30,6 @@ fun triangulo_numero(numero: Int){
 fun ejercicio8iterativa(){
     val numero = pedir_numero_positivo("Introduce un número para crear la pirámide")
     triangulo_numero(numero)
+    pausa()
 
 }

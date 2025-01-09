@@ -45,4 +45,5 @@ fun introducir_telefono(msj: String): List<String> {
 fun ejercicio20(){
     val numero_telefono_completo = introducir_telefono("Ingresa un número de teléfono con prefijo, teléfono y extensión")
     mostrar_telefono(numero_telefono_completo)
+    pausa()
 }

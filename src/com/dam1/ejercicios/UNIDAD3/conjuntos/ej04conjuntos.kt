@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD3.conjuntos
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 //Dadas las siguientes listas:
 //
 //frutas1 = ["manzana", "pera", "naranja", "plátano", "uva"]
@@ -33,4 +35,5 @@ fun ejercicio4conjuntos(){
     println("Frutas comunes: $frutas_comunes")
     println("Frutas solo en frutas1: $solo_frutas_en_frutas1")
     println("Frutas solo en frutas2: $solo_frutas_en_frutas2")
+    pausa()
 }

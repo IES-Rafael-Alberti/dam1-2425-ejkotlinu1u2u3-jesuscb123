@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD2.iterativas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import java.lang.classfile.Opcode
 
 //Mostrar un menú con tres opciones: 1- comenzar programa, 2- imprimir listado, 3-finalizar programa. A continuación, el usuario debe poder seleccionar una opción (1, 2 ó 3). Si elige una opción incorrecta, informarle del error. El menú se debe volver a mostrar luego de ejecutada cada opción, permitiendo volver a elegir. Si elige las opciones 1 ó 2 se imprimirá un texto. Si elige la opción 3, se interrumpirá la impresión del menú y el programa finalizará.
@@ -47,10 +48,17 @@ fun ejercicio19iterativa(){
         println(MENU)
         var opcion = pedir_opcion(OPCIONES)
         when(opcion){
-            1 -> println("Has comenzado el programa")
-            2 -> println("Imprimiendo listado...")
+            1 ->{println("Has comenzado el programa")
+                pausa()
+            }
+
+            2 -> {println("Imprimiendo listado...")
+                pausa()
+            }
             else ->{
+
                 println("Has finalizado el programa.")
+                pausa()
             }
         }
     } while(opcion != 3)

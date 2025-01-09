@@ -37,6 +37,7 @@ fun pedir_ahorro(msj:String): Double{
 fun ejercicio15(){
     var cuenta_ahorro = pedir_ahorro("Introduce tu ahorro: ")
     cantidad_ahorros_años(cuenta_ahorro,3,0.04)
+    pausa()
 }
 
 

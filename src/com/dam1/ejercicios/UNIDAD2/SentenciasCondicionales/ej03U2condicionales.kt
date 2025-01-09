@@ -1,6 +1,7 @@
 package com.dam1.ejercicios.UNIDAD2.SentenciasCondicionales
 
 import com.dam1.ejercicios.UNIDAD1.introducir_numero
+import com.dam1.ejercicios.UNIDAD1.pausa
 
 
 fun dividir(num1: Int, num2: Int): Int {
@@ -19,4 +20,5 @@ fun ejercicio3condicionales(){
     val num1 = introducir_numero("Introduce un número")
     val num2 = introducir_numero("Introduce un segundo número para la división")
     println("El resultado es: ${dividir(num1, num2)}")
+    pausa()
 }

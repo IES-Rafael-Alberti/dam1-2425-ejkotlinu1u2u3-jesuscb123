@@ -39,4 +39,5 @@ fun ejercicio22(){
     val frase = introducir_frase("Introduce una frase: ")
     val vocal = introducir_vocal("Introduce una vocal para encontrarla en la frase: ")
     mostrar_vocal_mayuscula(frase,vocal)
+    pausa()
 }

@@ -18,5 +18,6 @@ fun introducir_frase(msj: String): String{
 fun ejercicio21(){
     val frase = introducir_frase("Introduce una frase para invertirla:")
     println(invertir_frase(frase))
+    pausa()
 
 }

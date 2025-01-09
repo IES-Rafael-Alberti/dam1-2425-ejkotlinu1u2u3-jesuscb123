@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.conjuntos
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 import com.dam1.ejercicios.UNIDAD3.listasytuplas.pedir_dato_string
 
 //Solicitar al usuario que introduzca los nombres de pila de los alumnos de primaria de una escuela, finalizando cuando se introduzca “x”. A continuación, solicitar que introduzca los nombres de los alumnos de secundaria, finalizando al introducir “x”.
@@ -65,4 +66,5 @@ fun ejercicio2conjuntos(){
 
     println("Mostrar si los alumnos de primaria están en secundaria")
     incluidos(alumnos_primaria,alumnos_secundaria)
+    pausa()
 }

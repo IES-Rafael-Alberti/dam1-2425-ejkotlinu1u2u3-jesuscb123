@@ -1,5 +1,6 @@
 package com.dam1.ejercicios.UNIDAD3.listasytuplas
 
+import com.dam1.ejercicios.UNIDAD1.pausa
 
 
 //Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo.
@@ -23,4 +24,5 @@ fun pedir_dato_string(msj: String): String{
 fun ejercicio8listasytuplas(){
     var palabra = pedir_dato_string("Introduce una palabra para comprobar si es palindromo.")
     es_palindromo(palabra)
+    pausa()
 }

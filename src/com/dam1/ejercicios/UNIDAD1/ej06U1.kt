@@ -44,6 +44,7 @@ fun ejercicio6(){
         val importe_sin_iva = calcular_sin_iva(importe,iva)
         if (importe_sin_iva != null) {
             println("El importe con iva es: $importe y quitando el iva es: $importe_sin_iva")
+            pausa()
         } else{
             println("Error al calcular el importe sin iva")
         }

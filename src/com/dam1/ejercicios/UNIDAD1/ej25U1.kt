@@ -40,5 +40,6 @@ fun introducir_fecha(msj: String): String{
 fun ejercicio25(){
     var fecha = introducir_fecha("Introduce una fecha en formato dd/mm/aaaa")
     println(fecha)
+    pausa()
 
 }

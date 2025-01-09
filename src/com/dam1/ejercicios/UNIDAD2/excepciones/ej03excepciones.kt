@@ -1,5 +1,7 @@
 package com.dam1.ejercicios.UNIDAD2.excepciones
 
+import com.dam1.ejercicios.UNIDAD1.pausa
+
 //Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas. Deberá solicitar el número hasta introducir uno correcto.
 
 fun mostrar_cuenta_atras(numero: Int){
@@ -17,5 +19,6 @@ fun mostrar_cuenta_atras(numero: Int){
 fun ejercicio3excepciones(){
     var numero = pedir_numero_positivo("Introduce un número entero")
     mostrar_cuenta_atras(numero)
+    pausa()
 
 }
